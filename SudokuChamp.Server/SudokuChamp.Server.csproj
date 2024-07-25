@@ -20,11 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SudokuChamp.API\SudokuChamp.API.Domain\SudokuChamp.DAL.csproj" />
     <ProjectReference Include="..\..\SudokuChamp.API\SudokuChamp.API.SudokuGame\SudokuChamp.SudokuGame.csproj" />
     <ProjectReference Include="..\sudokuchamp.client\sudokuchamp.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\SudokuChamp.DAL\SudokuChamp.DAL.csproj" />
+    <ProjectReference Include="..\SudokuChamp.SudokuGame\SudokuChamp.SudokuGame.csproj" />
   </ItemGroup>
 
 </Project>
