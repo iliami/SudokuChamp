@@ -1,0 +1,109 @@
+.sudoku {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--bg);
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    grid-template-rows: repeat(9, auto);
+    gap: var(--gap);
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--cell-size);
+    width: var(--cell-size);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-cell);
+    color: var(--text-color);
+    font-size: var(--font-size);
+    cursor: pointer;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6) {
+    margin-right: var(--gap);
+}
+
+.cell:nth-child(19),
+.cell:nth-child(46) {
+    margin-bottom: var(--gap);
+}
+
+.cell.filled {
+    background-color: var(--filled-bg);
+    color: var(--text-color);
+}
+
+.cell.highlighted {
+    background-color: var(--highlighted);
+}
+
+.cell.selected {
+    background-color: var(--selected);
+}
+
+.cell.error {
+    background-color: var(--error);
+    color: var(--alt-text-color);
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: var(--gap);
+    margin-top: 2vmin;
+}
+
+.number,
+.remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--cell-size);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-cell);
+    font-size: var(--font-size);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.zoom {
+    animation: zoom 0.5s ease-in-out;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.2);
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: scale(1.2);
+    }
+
+    25% {
+        transform: scale(1.2) rotate(30deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(-30deg);
+    }
+}

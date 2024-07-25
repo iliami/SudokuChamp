@@ -1,0 +1,23 @@
+header {
+    background-color: rgb(85, 85, 234);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+header a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+header a:hover {
+    color: #ddd;
+}
